@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nevjegykartyak SYSTEM "2.dtd">
+<nevjegykartyak>
+  <nevjegykartya id="n1">
+    <nev>X1 Y1</nev>
+    <ceg>
+      <nev>C1</nev>
+      <cim>
+        <iranyitoszam>3534</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>X</utca>
+        <hazszam>10</hazszam>
+      </cim>
+      <telefonszam korzet="46">351-120</telefonszam>
+      <weblap>http://www.c1.com</weblap>
+    </ceg>
+    <beosztas>ügyvezető</beosztas>
+    <telefonszam>3532-45-12</telefonszam>
+    <email>x1.y1@c1.com</email>
+  </nevjegykartya>
+  
+  <nevjegykartya id="n2">
+    <nev>X2 Y2</nev>
+    <ceg>
+      <nev>C2</nev>
+      <cim>
+        <iranyitoszam>3536</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>Y</utca>
+        <hazszam>20</hazszam>
+      </cim>
+      <telefonszam korzet="46">464-234</telefonszam>
+      <email>info@c2.org</email>
+    </ceg>
+    <beosztas>architect</beosztas>
+    <telefonszam korzet="20">3532-45-12</telefonszam>
+    <email>x2.y2@c2.com</email>
+  </nevjegykartya>
+</nevjegykartyak>

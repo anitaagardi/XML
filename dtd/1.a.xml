@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE adomanyDB [
+  <!ELEMENT adomanyDB (adomanyozok, adomanyozottak, adomanyok)>
+  
+  <!ELEMENT adomanyozok (adomanyozo*)>
+  <!ELEMENT adomanyozo (nev, lakcim, szuletes, milliomos?)>
+  <!ELEMENT nev (#PCDATA)>
+  <!ELEMENT lakcim (iranyitoszam, varos, utca, hazszam)>
+  <!ELEMENT iranyitoszam (#PCDATA)>
+  <!ELEMENT varos (#PCDATA)>
+  <!ELEMENT utca (#PCDATA)>
+  <!ELEMENT hazszam (#PCDATA)>
+  <!ELEMENT szuletes (hely, ido)>
+  <!ELEMENT hely (#PCDATA)>
+  <!ELEMENT ido (#PCDATA)>
+  <!ELEMENT milliomos EMPTY>
+  <!ATTLIST adomanyozo adoazonosito ID #REQUIRED>
+  
+  <!ELEMENT adomanyozottak (adomanyozott*)>
+  <!ELEMENT adomanyozott (nev, cim)>
+  <!ELEMENT cim (iranyitoszam, varos, utca, hazszam)>
+  <!ATTLIST adomanyozott id ID #REQUIRED>
+  <!ATTLIST adomanyozott maganszemely (true | false) "false">
+  
+  <!ELEMENT adomanyok (adomany*)>
+  <!ELEMENT adomany (leiras, ertek)>
+  <!ELEMENT leiras (#PCDATA)>
+  <!ELEMENT ertek (#PCDATA)>
+  <!ATTLIST adomany adomanyozo IDREF #REQUIRED>
+  <!ATTLIST adomany adomanyozott IDREF #REQUIRED>
+]>
+<adomanyDB>
+  <adomanyozok>
+    <adomanyozo adoazonosito="aa1">
+      <nev>X1 Y1</nev>
+      <lakcim>
+        <iranyitoszam>3532</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>X</utca>
+        <hazszam>10</hazszam>
+      </lakcim>
+      <szuletes>
+        <hely>Miskolc</hely>
+        <ido>1983-03-22</ido>
+      </szuletes>
+    </adomanyozo>
+    
+    <adomanyozo adoazonosito="aa2">
+      <nev>X1 Y1</nev>
+      <lakcim>
+        <iranyitoszam>3532</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>X</utca>
+        <hazszam>10</hazszam>
+      </lakcim>
+      <szuletes>
+        <hely>Miskolc</hely>
+        <ido>1983-03-22</ido>
+      </szuletes>
+      <milliomos/>
+    </adomanyozo>
+  </adomanyozok>
+  
+  <adomanyozottak>
+    <adomanyozott id="a1">
+      <nev>X2 Y2</nev>
+      <cim>
+        <iranyitoszam>3521</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>Y</utca>
+        <hazszam>20</hazszam>
+      </cim>
+    </adomanyozott>
+    
+    <adomanyozott id="a2" maganszemely="true">
+      <nev>X3 Y3</nev>
+      <cim>
+        <iranyitoszam>3526</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>Z</utca>
+        <hazszam>30</hazszam>
+      </cim>
+    </adomanyozott>
+  </adomanyozottak>
+  
+  <adomanyok>
+    <adomany adomanyozo="aa1" adomanyozott="a1">
+      <leiras>Adomány 1</leiras>
+      <ertek>10</ertek>
+    </adomany>
+    
+    <adomany adomanyozo="aa1" adomanyozott="a2">
+      <leiras>Adomány 2</leiras>
+      <ertek>20</ertek>
+    </adomany>
+  </adomanyok>
+</adomanyDB>

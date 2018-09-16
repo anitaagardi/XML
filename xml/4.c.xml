@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ugyfelnyilvantartas>
+  <ugyfel ukod="1">
+    <nev>X1 Y1</nev>
+    <panaszok>
+      <panasz pkod="1">
+        <datum>2014-09-15</datum>
+        <targy>targy1</targy>
+        <tartalom><![CDATA[
+          tartalom1
+        ]]></tartalom>
+      </panasz>
+    </panaszok>
+  </ugyfel>
+  
+  <ugyfel ukod="2">
+    <nev>X2 Y2</nev>
+    <panaszok>
+      <panasz pkod="2">
+        <datum>2014-09-18</datum>
+        <targy>targy1</targy>
+        <tartalom><![CDATA[
+          tartalom2
+        ]]></tartalom>
+      </panasz>
+      
+      <panasz pkod="3">
+        <datum>2014-09-22</datum>
+        <targy>targy2</targy>
+        <tartalom><![CDATA[
+          tartalom3
+        ]]></tartalom>
+      </panasz>
+    </panaszok>
+  </ugyfel>
+</ugyfelnyilvantartas>

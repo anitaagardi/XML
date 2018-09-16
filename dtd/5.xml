@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email-kliens SYSTEM "5.dtd">
+<email-kliens>
+  <email id="e1">
+    <felado>
+      <nev>X1 Y1</nev>
+      <email-cim>x1.y1@gmail.com</email-cim>
+      <telefonszam korzet="46">123-456</telefonszam>
+    </felado>
+    
+    <cimzettek>
+      <cimzett tipus="cimzett">
+        <nev>X2 Y2</nev>
+        <email-cim>x2.y2@gmail.com</email-cim>
+        <telefonszam korzet="46">123-456</telefonszam>
+      </cimzett>
+      <cimzett tipus="masolat">
+        <nev>X4 Y4</nev>
+        <email-cim>x4.y4@gmail.com</email-cim>
+      </cimzett>
+      <cimzett tipus="titkos-masolat">
+        <nev>X6 Y6</nev>
+        <email-cim>x6.y6@gmail.com</email-cim>
+      </cimzett>
+    </cimzettek>
+    
+    <datum>2013-09-14</datum>
+    <targy>Tárgy 1</targy>
+    <formatum>text/plain</formatum>
+    <tartalom>
+      <![CDATA[
+        ...
+      ]]>
+    </tartalom>
+  </email>
+</email-kliens>

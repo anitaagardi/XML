@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<A>
+  <a>2</a>
+  <a>3</a>
+  <a>
+    3
+    <d>aa</d>
+    <a>
+      <a a="G"/>
+    </a>
+  </a>
+  <xml>
+    &lt;?xml version=&quot;1.0&quot;&gt;
+    &lt;response id=&quot;1&quot;&gt;
+      &lt;message&gt;
+        Hello, world!
+      &lt;/message&gt;
+    &lt;/response&gt;
+  </xml>
+</A>

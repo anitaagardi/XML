@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nyilvantartas>
+  <diakok>
+    <diak nkod="ABCDEF">
+      <nev>diak1</nev>
+    </diak>
+    <diak nkod="ABCDEG">
+      <nev>diak2</nev>
+    </diak>
+  </diakok>
+  
+  <targyak>
+    <targy tkod="GEIAL312B">
+      <nev>Programozás alapjai</nev>
+    </targy>
+    <targy tkod="GEIAL313B">
+      <nev>Objektum orientált programozás</nev>
+    </targy>
+    <targy tkod="GEIAL322B">
+      <nev>Adatbázis rendszerek 1</nev>
+    </targy>
+    <targy tkod="GEIAL332B">
+      <nev>Adatkezelés XML-es környezetben</nev>
+    </targy>
+  </targyak>
+  
+  <eredmenyek>
+    <eredmeny nkod="ABCDEF" tkod="GEIAL322B">5</eredmeny>
+    <eredmeny nkod="ABCDEF" tkod="GEIAL332B">5</eredmeny>
+    <eredmeny nkod="ABCDEG" tkod="GEIAL312B">5</eredmeny>
+    <eredmeny nkod="ABCDEG" tkod="GEIAL313B">5</eredmeny>
+  </eredmenyek>
+</nyilvantartas>

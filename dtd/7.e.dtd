@@ -1,0 +1,3 @@
+<!ELEMENT egyed (tobberteku-tulajdonsag)>
+<!ELEMENT tubberteku-tulajdonsag (resz*)>
+<!ELEMENT resz (#PCDATA)>

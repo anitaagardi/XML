@@ -1,0 +1,14 @@
+<!ELEMENT gyoker (egyed1-reszfa, egyed2-reszfa, kapcsolo-egyedek)>
+
+<!ELEMENT egyed1-reszfa (egyed1*)>
+<!ELEMENT egyed1 EMPTY>
+<!ATTLIST egyed1 id ID #REQUIRED>
+
+<!ELEMENT egyed2-reszfa (egyed2*)>
+<!ELEMENT egyed2 EMPTY>
+<!ATTLIST egyed2 id ID #REQUIRED>
+
+<!ELEMENT kapcsolo-egyedek (kapcsolo-egyed*)>
+<!ELEMENT kapcsolo-egyed EMPTY>
+<!ATTLIST kapcsolo-egyed egyed1 IDREF #REQUIRED>
+<!ATTLIST kapcsolo-egyed egyed2 IDREF #REQUIRED>

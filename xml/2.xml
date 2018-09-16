@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uzem>
+  <dolgozo dkod="1">
+    <nev>dolgozo1</nev>
+    <vegzettseg>
+      <ev>1995</ev>
+      <szak>szak1</szak>
+      <intezmeny>intezmeny1</intezmeny>
+    </vegzettseg>
+    <vegzettseg>
+      <ev>1996</ev>
+      <szak>szak2</szak>
+      <intezmeny>intezmeny2</intezmeny>
+    </vegzettseg>
+  </dolgozo>
+  
+  <dolgozo dkod="2">
+    <nev>dolgozo2</nev>
+    <vegzettseg>
+      <ev>1997</ev>
+      <szak>szak3</szak>
+      <intezmeny>intezmeny3</intezmeny>
+    </vegzettseg>
+    <vegzettseg>
+      <ev>1998</ev>
+      <szak>szak4</szak>
+      <intezmeny>intezmeny4</intezmeny>
+    </vegzettseg>
+  </dolgozo>
+  
+  <projekt pkod="1">
+    <nev>projekt1</nev>
+    <hatarido>2014-09-30</hatarido>
+    <tag>1</tag>
+    <tag>2</tag>
+  </projekt>
+  
+  <projekt pkod="2">
+    <nev>projekt2</nev>
+    <hatarido>2014-10-31</hatarido>
+    <tag>1</tag>
+    <tag>2</tag>
+  </projekt>
+</uzem>

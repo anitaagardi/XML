@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE orarend SYSTEM "8.a.dtd">
+<orarend>
+  <ora id="o1" tipus="gyakorlat">
+    <targy>Adatkezelés XML-es környezetben</targy>
+    <idopont>
+      <nap>hétfő</nap>
+      <tol>8</tol>
+      <ig>10</ig>
+    </idopont>
+    <helyszin>In/103</helyszin>
+    <oktato>Szabó Gábor</oktato>
+    <szak>Mérnökinformatikus BSc</szak>
+  </ora>
+  
+  <ora id="o2">
+    <targy>Adatkezelés XML-es környezetben</targy>
+    <idopont>
+      <nap>kedd</nap>
+      <tol>10</tol>
+      <ig>12</ig>
+    </idopont>
+    <helyszin>A1/320</helyszin>
+    <oktato>Kovács László</oktato>
+    <szak>Mérnökinformatikus BSc</szak>
+  </ora>
+  
+  <ora id="o3" tipus="gyakorlat">
+    <targy>Adatkezelés XML-es környezetben</targy>
+    <idopont>
+      <nap>csütörtök</nap>
+      <tol>14</tol>
+      <ig>16</ig>
+    </idopont>
+    <helyszin>In/103</helyszin>
+    <oktato>Szabó Gábor</oktato>
+    <szak>Mérnökinformatikus BSc</szak>
+  </ora>
+</orarend>

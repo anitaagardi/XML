@@ -1,0 +1,17 @@
+<!ELEMENT nevjegykartyak (nevjegykartya+)>
+
+<!ELEMENT nevjegykartya (nev, ceg, beosztas, telefonszam, email)>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT ceg (nev, cim, telefonszam, (weblap | email))>
+<!ELEMENT beosztas (#PCDATA)>
+<!ELEMENT telefonszam (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT cim (iranyitoszam, varos, utca, hazszam)>
+<!ELEMENT iranyitoszam (#PCDATA)>
+<!ELEMENT varos (#PCDATA)>
+<!ELEMENT utca (#PCDATA)>
+<!ELEMENT hazszam (#PCDATA)>
+<!ELEMENT weblap (#PCDATA)>
+
+<!ATTLIST nevjegykartya id ID #REQUIRED>
+<!ATTLIST telefonszam korzet CDATA #IMPLIED>

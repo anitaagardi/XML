@@ -1,0 +1,28 @@
+<!ELEMENT adomanyDB (adomanyozok, adomanyozottak, adomanyok)>
+
+<!ELEMENT adomanyozok (adomanyozo*)>
+<!ELEMENT adomanyozo (nev, lakcim, szuletes, milliomos?)>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT lakcim (iranyitoszam, varos, utca, hazszam)>
+<!ELEMENT iranyitoszam (#PCDATA)>
+<!ELEMENT varos (#PCDATA)>
+<!ELEMENT utca (#PCDATA)>
+<!ELEMENT hazszam (#PCDATA)>
+<!ELEMENT szuletes (hely, ido)>
+<!ELEMENT hely (#PCDATA)>
+<!ELEMENT ido (#PCDATA)>
+<!ELEMENT milliomos EMPTY>
+<!ATTLIST adomanyozo adoazonosito ID #REQUIRED>
+
+<!ELEMENT adomanyozottak (adomanyozott*)>
+<!ELEMENT adomanyozott (nev, cim)>
+<!ELEMENT cim (iranyitoszam, varos, utca, hazszam)>
+<!ATTLIST adomanyozott id ID #REQUIRED>
+<!ATTLIST adomanyozott maganszemely (true | false) "false">
+
+<!ELEMENT adomanyok (adomany*)>
+<!ELEMENT adomany (leiras, ertek)>
+<!ELEMENT leiras (#PCDATA)>
+<!ELEMENT ertek (#PCDATA)>
+<!ATTLIST adomany adomanyozo IDREF #REQUIRED>
+<!ATTLIST adomany adomanyozott IDREF #REQUIRED>

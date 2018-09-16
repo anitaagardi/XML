@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gyoker SYSTEM "7.g.dtd">
+<gyoker>
+  <egyed1-reszfa>
+    <egyed1 id="x1"/>
+    <egyed1 id="x2"/>
+  </egyed1-reszfa>
+  
+  <egyed2-reszfa>
+    <egyed2 id="y1"/>
+    <egyed2 id="y2"/>
+  </egyed2-reszfa>
+  
+  <kapcsolo-egyedek>
+    <kapcsolo-egyed egyed1="x1" egyed2="y1"/>
+    <kapcsolo-egyed egyed1="x1" egyed2="y2"/>
+    <kapcsolo-egyed egyed1="x2" egyed2="y1"/>
+  </kapcsolo-egyedek>
+</gyoker>

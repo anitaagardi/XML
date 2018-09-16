@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cd SYSTEM "6.dtd" [
+  <!ENTITY % konyv "IGNORE">
+  <!ENTITY % cd "INCLUDE">
+]>
+<!-- Ha a paraméterszimbólumok felüldefiniálása kimarad,
+  az Eclipse nem jelez hibát, de az oXygen igen. -->
+<cd>
+  <eloado>X Y</eloado>
+  <cim>X</cim>
+  <stilus>X</stilus>
+  <evszam>2000</evszam>
+</cd>

@@ -1,0 +1,10 @@
+<!ELEMENT konyvtari-nyilvantartas (konyv+)>
+
+<!ELEMENT konyv (szerzo, cim, evszam, terjedelem, targyszavak)>
+<!ELEMENT szerzo (#PCDATA)>
+<!ELEMENT cim (#PCDATA)>
+<!ELEMENT evszam (#PCDATA)>
+<!ELEMENT terjedelem (#PCDATA)>
+<!ELEMENT targyszavak (targyszo*)>
+<!ELEMENT targyszo (#PCDATA)>
+<!ATTLIST konyv isbn ID #REQUIRED>

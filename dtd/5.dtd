@@ -1,0 +1,21 @@
+<!ELEMENT email-kliens (email*)>
+
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT email-cim (#PCDATA)>
+<!ELEMENT telefonszam (#PCDATA)>
+<!ATTLIST telefonszam korzet CDATA #IMPLIED>
+<!ENTITY % elerhetoseg "nev, email-cim, telefonszam?">
+
+<!ELEMENT email (felado, cimzettek, datum, targy, formatum, tartalom)>
+<!ATTLIST email id ID #REQUIRED>
+
+<!ELEMENT felado (%elerhetoseg;)>
+
+<!ELEMENT cimzettek (cimzett+)>
+<!ELEMENT cimzett (%elerhetoseg;)>
+<!ATTLIST cimzett tipus (cimzett | masolat | titkos-masolat) "cimzett">
+
+<!ELEMENT datum (#PCDATA)>
+<!ELEMENT targy (#PCDATA)>
+<!ELEMENT formatum (#PCDATA)>
+<!ELEMENT tartalom (#PCDATA)>

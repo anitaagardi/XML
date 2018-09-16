@@ -1,0 +1,18 @@
+<!ENTITY % konyv "INCLUDE">
+<!ENTITY % cd "IGNORE">
+
+<![%konyv;[
+  <!ELEMENT konyv (szerzo, cim, kiado, kiadasi-ev)>
+  <!ELEMENT szerzo (#PCDATA)>
+  <!ELEMENT cim (#PCDATA)>
+  <!ELEMENT kiado (#PCDATA)>
+  <!ELEMENT kiadasi-ev (#PCDATA)>
+]]>
+
+<![%cd;[
+  <!ELEMENT cd (eloado, cim, stilus, evszam)>
+  <!ELEMENT eloado (#PCDATA)>
+  <!ELEMENT cim (#PCDATA)>
+  <!ELEMENT stilus (#PCDATA)>
+  <!ELEMENT evszam (#PCDATA)>
+]]>

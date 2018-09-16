@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE konyvtari-nyilvantartas SYSTEM "8.b.dtd">
+<konyvtari-nyilvantartas>
+  <konyv isbn="i963-9131-71-7">
+    <szerzo>Bradley, Neil</szerzo>
+    <cim>Az XML-kézikönyv</cim>
+    <evszam>2005</evszam>
+    <terjedelem>758</terjedelem>
+    <targyszavak>
+      <targyszo>számítógépes hálózat</targyszo>
+      <targyszo>Internet</targyszo>
+      <targyszo>programozási nyelvek</targyszo>
+      <targyszo>XML</targyszo>
+    </targyszavak>
+  </konyv>
+</konyvtari-nyilvantartas>

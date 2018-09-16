@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<A>
+  <a>2</a>
+  <a>3</a>
+  <a>
+    3
+    <d>aa</d>
+    <a>
+      <!-- Empty element with a single attribute -->
+      <a a="G"/>
+    </a>
+  </a>
+</A>

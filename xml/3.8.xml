@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<A>
+  <a>2</a>
+  <a>3</a>
+  <a>
+    3
+    <d>aa</d>
+    <a>
+      <a a="G"/>
+    </a>
+  </a>
+  <xml>
+    <![CDATA[
+      <?xml version="1.0"?>
+      <response id="1">
+        <message>
+          Hello, world!
+        </message>
+      </response>
+    ]]>
+  </xml>
+</A>

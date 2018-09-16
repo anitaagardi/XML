@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE softwareCompany SYSTEM "9.b.dtd">
+<softwareCompany>
+  <developers>
+    <developer developerID="d1">
+      <name>X1 Y1</name>
+      <technologies>
+        <technology>&cs;</technology>
+        <technology>&java;</technology>
+      </technologies>
+    </developer>
+    
+    <developer developerID="d2">
+      <name>X2 Y2</name>
+      <technologies>
+        <technology>&cpp;</technology>
+      </technologies>
+    </developer>
+    
+    <developer developerID="d3">
+      <name>X3 Y3</name>
+      <technologies>
+        <technology>&java;</technology>
+        <technology>&cpp;</technology>
+        <technology>&cs;</technology>
+      </technologies>
+    </developer>
+    
+    <developer developerID="d4">
+      <name>X4 Y4</name>
+      <technologies>
+        <technology>&java;</technology>
+      </technologies>
+    </developer>
+  </developers>
+  
+  <teams>
+    <team teamID="t1">
+      <name>Team 1</name>
+      <members>
+        <member developerID="d1"/>
+        <member developerID="d2"/>
+      </members>
+    </team>
+    
+    <team teamID="t2">
+      <name>Team 2</name>
+      <members>
+        <member developerID="d3"/>
+        <member developerID="d4"/>
+      </members>
+    </team>
+  </teams>
+  
+  <projects>
+    <project projectID="p1">
+      <name>Project 1</name>
+      <associatedTeams>
+        <associatedTeam teamID="t1"/>
+        <associatedTeam teamID="t2"/>
+      </associatedTeams>
+    </project>
+    
+    <project projectID="p2">
+      <name>Project 2</name>
+      <associatedTeams>
+        <associatedTeam teamID="t2"/>
+      </associatedTeams>
+    </project>
+  </projects>
+  
+  <worklogs>
+    <worklog developer="d1" date="2013-10-01">
+      <meeting projectID="p1">1</meeting>
+      <meeting projectID="p2">1</meeting>
+      <designing projectID="p1">4</designing>
+      <programming projectID="p1">2</programming>
+    </worklog>
+    
+    <worklog developer="d1" date="2013-10-02">
+      <meeting projectID="p1">1</meeting>
+      <designing projectID="p1">3</designing>
+      <programming projectID="p1">3</programming>
+      <testing projectID="p1">1</testing>
+    </worklog>
+    
+    <worklog developer="d1" date="2013-10-03">
+      <meeting projectID="p1">1</meeting>
+      <designing projectID="p1">2</designing>
+      <programming projectID="p1">3</programming>
+      <testing projectID="p1">1</testing>
+      <testing projectID="p2">1</testing>
+    </worklog>
+    
+    <worklog developer="d1" date="2013-10-04">
+      <meeting projectID="p1">1</meeting>
+      <programming projectID="p1">7</programming>
+    </worklog>
+    
+    <worklog developer="d1" date="2013-10-05">
+      <meeting projectID="p1">1</meeting>
+      <programming projectID="p1">5</programming>
+      <testing projectID="p1">2</testing>
+    </worklog>
+    
+    <worklog developer="d1" date="2013-10-06">
+      <meeting projectID="p1">1</meeting>
+      <programming projectID="p1">5</programming>
+      <testing projectID="p1">1</testing>
+      <testing projectID="p2">1</testing>
+    </worklog>
+    
+    <worklog developer="d1" date="2013-10-07">
+      <meeting projectID="p1">2</meeting>
+      <testing projectID="p1">3</testing>
+      <demo projectID="p1">3</demo>
+    </worklog>
+    
+    <worklog developer="d1" date="2013-10-08">
+      <meeting projectID="p1">1</meeting>
+      <testing projectID="p1">3</testing>
+      <bugFixing projectID="p1">4</bugFixing>
+    </worklog>
+  </worklogs>
+</softwareCompany>

@@ -1,0 +1,2 @@
+<!ELEMENT egyed1 (egyed2*)>
+<!ELEMENT egyed2 EMPTY>

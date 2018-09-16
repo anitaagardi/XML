@@ -1,0 +1,2 @@
+<!ELEMENT egyed EMPTY>
+<!ATTLIST egyed tulajdonsag CDATA #IMPLIED>

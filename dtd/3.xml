@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE a SYSTEM "3.dtd">
+<!-- <!ELEMENT a (a+) jellegű definíciók megvalósíthatatlanok,
+     ilyenkor meg kell engedni a sima szöveges tartalmat is. (mixed content) -->
+<a>
+  <b>
+    <a>a-content</a>
+  </b>
+  <b>b-content</b>
+</a>

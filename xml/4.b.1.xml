@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diakok>
+  <diak nkod="ABCDEF">
+    <nev>diak1</nev>
+    <eredmenyek>
+      <eredmeny tkod="GEIAL322B">5</eredmeny>
+      <eredmeny tkod="GEIAL332B">5</eredmeny>
+    </eredmenyek>
+  </diak> 
+  <diak nkod="ABCDEG">
+    <nev>diak2</nev>
+    <eredmenyek>
+      <eredmeny tkod="GEIAL312B">5</eredmeny>
+      <eredmeny tkod="GEIAL313B">5</eredmeny>
+    </eredmenyek>
+  </diak>
+</diakok>

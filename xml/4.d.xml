@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menetrend>
+  <vonat id="1" tipus="személyi">
+    <indulas>
+      <telepules>Miskolc</telepules>
+      <palyaudvar>Tiszai pályaudvar</palyaudvar>
+      <vagany>6</vagany>
+      <datum>2014-09-14T03:28:00</datum>
+    </indulas>
+    <erkezes>
+      <telepules>Budapest</telepules>
+      <palyaudvar>Keleti pályaudvar</palyaudvar>
+      <vagany>4</vagany>
+      <datum>2014-09-14T06:20:00</datum>
+    </erkezes>
+  </vonat>
+  
+  <vonat id="2" tipus="IC">
+    <indulas>
+      <telepules>Miskolc</telepules>
+      <palyaudvar>Tiszai pályaudvar</palyaudvar>
+      <vagany>9</vagany>
+      <datum>2014-09-14T06:09:00</datum>
+    </indulas>
+    <erkezes>
+      <telepules>Budapest</telepules>
+      <palyaudvar>Nyugati pályaudvar</palyaudvar>
+      <vagany>1</vagany>
+      <datum>2014-09-14T10:37:00</datum>
+    </erkezes>
+  </vonat>
+</menetrend>

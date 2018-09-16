@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<A>
+  <a>2</a>
+  <a>3</a>
+  <a>
+    3
+    <d>aa</d>
+    <a>
+      <a:a xmlns:a="ALMA1"
+           xmlns:b="ALMA2"
+           b:a="G">
+      </a:a>
+    </a>
+  </a>
+</A>

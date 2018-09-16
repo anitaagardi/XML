@@ -1,0 +1,4 @@
+<!ELEMENT egyed (osszetett-tulajdonsag)>
+<!ELEMENT osszetett-tulajdonsag (resz1, resz2)>
+<!ELEMENT resz1 (#PCDATA)>
+<!ELEMENT resz2 (#PCDATA)>
