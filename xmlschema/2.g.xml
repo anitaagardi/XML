@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gyoker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="2.g.xsd">
+  <egyed1-reszfa>
+    <egyed1 id="1"/>
+    <egyed1 id="2"/>
+  </egyed1-reszfa>
+  
+  <egyed2-reszfa>
+    <egyed2 id="1"/>
+    <egyed2 id="2"/>
+  </egyed2-reszfa>
+  
+  <kapcsolo-egyedek>
+    <kapcsolo-egyed egyed1="1" egyed2="1"/>
+    <kapcsolo-egyed egyed1="1" egyed2="2"/>
+    <kapcsolo-egyed egyed1="2" egyed2="1"/>
+  </kapcsolo-egyedek>
+</gyoker>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.xsd">
+  
+  <ures-elem/>
+  
+  <ures-elem-attributummal1 x="1"/>
+  <ures-elem-attributummal1 x="1" y="2"/>
+  <!-- HIBA! A z attribútum megadása tilos! -->
+  <!--<ures-elem-attributummal1 x="1" y="2" z="3"/>-->
+  
+  <ures-elem-attributummal2/>
+  <ures-elem-attributummal2 x="1"/>
+  <ures-elem-attributummal2 y="3"/>
+  <!-- HIBA! Fixed attribútum értékét nem lehet felüldefiniálni! -->
+  <!--<ures-elem-attributummal2 x="2"/>-->
+  
+  <text-only-gyari-tipussal>hello</text-only-gyari-tipussal>
+  
+  <sajat-string1>a</sajat-string1>
+  <sajat-string1>b</sajat-string1>
+  <sajat-string1>c</sajat-string1>
+  <!-- HIBA! A d nem megengedett érték! -->
+  <!--<sajat-string1>d</sajat-string1>-->
+  
+  <sajat-string2>aaa</sajat-string2>
+  <sajat-string2>aaaaa</sajat-string2>
+  <!-- HIBA! A string rövidebb 3 karakternél! -->
+  <!--<sajat-string2>aa</sajat-string2>-->
+  <!-- HIBA! A string hosszabb 5 karakternél! -->
+  <!--<sajat-string2>aaaaaa</sajat-string2>-->
+  
+  <sajat-string3>ab01</sajat-string3>
+  <sajat-szam1>1</sajat-szam1>
+  <sajat-szam1>99</sajat-szam1>
+  <!-- HIBA! Az érték nem lehet 0! -->
+  <!--<sajat-szam1>0</sajat-szam1>-->
+  <!-- HIBA! Az érték nem lehet 100! (Ráadásul ez már 3 számjegy!) -->
+  <!--<sajat-szam1>100</sajat-szam1>-->
+  
+  <sajat-szam2>0.01</sajat-szam2>
+  <sajat-szam2>99.99</sajat-szam2>
+  <!-- HIBA! Maximum 2 tizedesjegy szerepelhet! -->
+  <!--<sajat-szam2>0.025</sajat-szam2>-->
+  <!-- HIBA! A minimális érték 0.01! -->
+  <!--<sajat-szam2>-0.01</sajat-szam2>-->
+  <!-- HIBA! A maximális érték 99.99! -->
+  <!--<sajat-szam2>100.00</sajat-szam2>-->
+  
+  <gyari-lista>true false true</gyari-lista>
+  
+  <gyari-unio>1</gyari-unio>
+  <gyari-unio>1.1</gyari-unio>
+  
+  <sajat-lista>1 99</sajat-lista>
+  
+  <sajat-unio>0.01</sajat-unio>
+  <sajat-unio>2013-10-11</sajat-unio>
+  
+  <!--
+    Mixed type használata nem ajánlott,
+    mert nem tudjuk korlátozni a szöveg típusát!
+  -->
+  <mixed x="1">
+    Időpont:
+    <a>10:05:26</a>
+  </mixed>
+  
+  <child-only>
+    <a>2013-10-11T08:00:00</a>
+    <b>1</b>
+    <b>2</b>
+  </child-only>
+  
+  <child-only-attributummal x="2">
+    <a>3</a>
+  </child-only-attributummal>
+  
+  <korlatozott-child-only>
+    <a>2013-10-11T08:00:00</a>
+    <b>1</b>
+    <b>2</b>
+    <!-- HIBA! A b elemek értéke nem lehet negatív! -->
+    <!--<b>-3</b>-->
+  </korlatozott-child-only>
+  
+  <kibovitett-child-only>
+    <a>2013-10-11T08:00:00</a>
+    <b>1</b>
+    <b>2</b>
+    <c>true</c>
+  </kibovitett-child-only>
+  
+  <telefonszam korzet="46">123-456</telefonszam>
+  <!-- HIBA! A körzetszám legfeljebb 2 számjegyet tartalmazhat! -->
+  <!--<telefonszam korzet="123">123-456</telefonszam>-->
+  <!-- HIBA! A telefonszám nem felel meg a reguláris kifejezésnek! -->
+  <!--<telefonszam korzet="1">123-4567</telefonszam>-->
+  
+  <komplex-struktura1>
+    <a>1</a>
+    <b>2</b>
+    <c>3</c>
+  </komplex-struktura1>
+  
+  <komplex-struktura2>
+    <a>1</a>
+    <b>2</b>
+    <c>3</c>
+    <c>4</c>
+    <b>5</b>
+  </komplex-struktura2>
+  
+</root>

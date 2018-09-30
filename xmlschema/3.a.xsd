@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="softwareCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="developers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="developer" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name"/>
+                    <xs:element name="technologies">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="technology" maxOccurs="unbounded">
+                            <xs:simpleType>
+                              <xs:restriction base="xs:string">
+                                <xs:enumeration value="C#"/>
+                                <xs:enumeration value="Java"/>
+                                <xs:enumeration value="C++"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="developerID" type="xs:int" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="teams">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="team" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="members">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="member" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="developerID" type="xs:int" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="teamID" type="xs:int" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="projects">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="project" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="associatedTeams">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="associatedTeam" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="teamID" type="xs:int" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="projectID" type="xs:int" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="worklogs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="worklog" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="meeting" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:int">
+                            <xs:attribute name="projectID" type="xs:int" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:choice>
+                      <xs:sequence>
+                        <xs:element name="designing" minOccurs="0">
+                          <xs:complexType>
+                            <xs:simpleContent>
+                              <xs:extension base="xs:int">
+                                <xs:attribute name="projectID" type="xs:int" use="required"/>
+                              </xs:extension>
+                            </xs:simpleContent>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="programming">
+                          <xs:complexType>
+                            <xs:simpleContent>
+                              <xs:extension base="xs:int">
+                                <xs:attribute name="projectID" type="xs:int" use="required"/>
+                              </xs:extension>
+                            </xs:simpleContent>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:sequence>
+                        <xs:element name="testing">
+                          <xs:complexType>
+                            <xs:simpleContent>
+                              <xs:extension base="xs:int">
+                                <xs:attribute name="projectID" type="xs:int" use="required"/>
+                              </xs:extension>
+                            </xs:simpleContent>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:choice>
+                          <xs:element name="demo">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:int">
+                                  <xs:attribute name="projectID" type="xs:int" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="bugFixing">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:int">
+                                  <xs:attribute name="projectID" type="xs:int" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:choice>
+                      </xs:sequence>
+                    </xs:choice>
+                  </xs:sequence>
+                  <xs:attribute name="developer" type="xs:int" use="required"/>
+                  <xs:attribute name="date" type="xs:date" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

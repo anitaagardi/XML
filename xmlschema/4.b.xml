@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="4.b.xsd">
+  
+  <auto id="1"/>
+  <car id="2"/>
+  <wagen id="3"/>
+  
+</root>

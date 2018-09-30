@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="auto" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="autoTipus">
+    <xs:attribute name="id" type="xs:integer" use="required"/>
+  </xs:complexType>
+  
+  <xs:element name="auto" type="autoTipus"/>
+  <xs:element name="car" substitutionGroup="auto"/>
+  <xs:element name="wagen" substitutionGroup="auto"/>
+  
+</xs:schema>

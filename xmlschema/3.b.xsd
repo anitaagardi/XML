@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="softwareCompany" type="softwareCompanyType"/>
+  
+  <xs:complexType name="softwareCompanyType">
+    <xs:sequence>
+      <xs:element name="developers" type="developersType"/>
+      <xs:element name="teams" type="teamsType"/>
+      <xs:element name="projects" type="projectsType"/>
+      <xs:element name="worklogs" type="worklogsType"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <!-- Developers -->
+  
+  <xs:complexType name="developersType">
+    <xs:sequence>
+      <xs:element name="developer" type="developerType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="developerType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="technologies" type="technologiesType"/>
+    </xs:sequence>
+    <xs:attribute name="developerID" type="xs:int" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="technologiesType">
+    <xs:sequence>
+      <xs:element name="technology" type="technologyType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="technologyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="C#"/>
+      <xs:enumeration value="Java"/>
+      <xs:enumeration value="C++"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Teams -->
+  
+  <xs:complexType name="teamsType">
+    <xs:sequence>
+      <xs:element name="team" type="teamType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="teamType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="members" type="membersType"/>
+    </xs:sequence>
+    <xs:attribute name="teamID" type="xs:int" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="membersType">
+    <xs:sequence>
+      <xs:element name="member" type="memberType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="memberType">
+    <xs:attribute name="developerID" type="xs:int" use="required"/>
+  </xs:complexType>
+  
+  <!-- Projects -->
+  
+  <xs:complexType name="projectsType">
+    <xs:sequence>
+      <xs:element name="project" type="projectType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="projectType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="associatedTeams" type="associatedTeamsType"/>
+    </xs:sequence>
+    <xs:attribute name="projectID" type="xs:int" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="associatedTeamsType">
+    <xs:sequence>
+      <xs:element name="associatedTeam" type="associatedTeamType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="associatedTeamType">
+    <xs:attribute name="teamID" type="xs:int" use="required"/>
+  </xs:complexType>
+  
+  <!-- Worklogs -->
+  
+  <xs:complexType name="worklogsType">
+    <xs:sequence>
+      <xs:element name="worklog" type="worklogType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="worklogType">
+    <xs:sequence>
+      <xs:element name="meeting" type="worklogItemType" maxOccurs="unbounded"/>
+      
+      <xs:choice>
+        <xs:sequence>
+          <xs:element name="designing" type="worklogItemType" minOccurs="0"/>
+          <xs:element name="programming" type="worklogItemType"/>
+          <xs:element name="testing" type="worklogItemType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        
+        <xs:sequence>
+          <xs:element name="testing" type="worklogItemType"/>
+          <xs:choice>
+            <xs:element name="demo" type="worklogItemType"/>
+            <xs:element name="bugFixing" type="worklogItemType"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:choice>
+    </xs:sequence>
+    
+    <xs:attribute name="developer" type="xs:int" use="required"/>
+    <xs:attribute name="date" type="xs:date" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="worklogItemType">
+    <xs:simpleContent>
+      <xs:extension base="xs:int">
+        <xs:attribute name="projectID" type="xs:int" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+</xs:schema>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="adomanyDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="adomanyozok">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="adomanyozo" type="adomanyozoTipus" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="adomanyozottak">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="adomanyozott" type="adomanyozottTipus" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="adomanyok">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="adomany" type="adomanyTipus" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="adomanyozoTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="lakcim" type="lakcimTipus"/>
+      <xs:element name="szuletes" type="szuletesTipus"/>
+      <xs:element name="milliomos" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="adoazonosito" type="adoazonositoTipus" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="lakcimTipus">
+    <xs:sequence>
+      <xs:element name="iranyitoszam" type="iranyitoszamTipus"/>
+      <xs:element name="varos" type="xs:string"/>
+      <xs:element name="utca" type="xs:string"/>
+      <xs:element name="hazszam" type="xs:positiveInteger"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="iranyitoszamTipus">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1000"/>
+      <xs:maxInclusive value="9999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="szuletesTipus">
+    <xs:sequence>
+      <xs:element name="hely" type="xs:string"/>
+      <xs:element name="ido" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="adoazonositoTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{10}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="adomanyozottTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="cim" type="lakcimTipus"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:int" use="required"/>
+    <xs:attribute name="maganszemely" type="xs:boolean" default="false"/>
+  </xs:complexType>
+  
+  <xs:complexType name="adomanyTipus">
+    <xs:sequence>
+      <xs:element name="leiras" type="xs:string"/>
+      <xs:element name="ertek" type="xs:positiveInteger"/>
+    </xs:sequence>
+    <xs:attribute name="adomanyozo" type="adoazonositoTipus" use="required"/>
+    <xs:attribute name="adomanyozott" type="xs:positiveInteger" use="required"/>
+  </xs:complexType>
+  
+</xs:schema>

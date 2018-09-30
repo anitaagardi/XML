@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gyoker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="2.b.xsd">
+  
+  <egyed kulcs="1"/>
+  <egyed kulcs="2"/>
+  <egyed kulcs="3"/>
+  
+</gyoker>

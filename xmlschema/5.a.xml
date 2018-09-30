@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autoDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="5.a.xsd">
+  <autok>
+    <auto rsz="ABC-123">
+      <gyarto>Gyártó 1</gyarto>
+      <modell>Modell 1</modell>
+    </auto>
+    
+    <auto rsz="ABC-124">
+      <gyarto>Gyártó 2</gyarto>
+      <modell>Modell 2</modell>
+    </auto>
+  </autok>
+  
+  <tulajdonosok>
+    <tulajdonos id="1">
+      <nev>X1 Y1</nev>
+      <autok>
+        <auto>ABC-123</auto>
+      </autok>
+    </tulajdonos>
+    
+    <tulajdonos id="2">
+      <nev>X2 Y2</nev>
+      <autok>
+        <auto>ABC-124</auto>
+        <auto>ABC-125</auto>
+      </autok>
+    </tulajdonos>
+  </tulajdonosok>
+</autoDB>

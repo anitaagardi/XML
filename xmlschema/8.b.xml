@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adomanyDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="8.b.xsd">
+  <adomanyozok>
+    <adomanyozo adoazonosito="1234567890">
+      <nev>X1 Y1</nev>
+      <lakcim>
+        <iranyitoszam>3532</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>X</utca>
+        <hazszam>10</hazszam>
+      </lakcim>
+      <szuletes>
+        <hely>Miskolc</hely>
+        <ido>1983-03-22</ido>
+      </szuletes>
+    </adomanyozo>
+    
+    <adomanyozo adoazonosito="1234567891">
+      <nev>X1 Y1</nev>
+      <lakcim>
+        <iranyitoszam>3532</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>X</utca>
+        <hazszam>10</hazszam>
+      </lakcim>
+      <szuletes>
+        <hely>Miskolc</hely>
+        <ido>1983-03-22</ido>
+      </szuletes>
+      <milliomos/>
+    </adomanyozo>
+  </adomanyozok>
+  
+  <adomanyozottak>
+    <adomanyozott id="1">
+      <nev>X2 Y2</nev>
+      <cim>
+        <iranyitoszam>3521</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>Y</utca>
+        <hazszam>20</hazszam>
+      </cim>
+    </adomanyozott>
+    
+    <adomanyozott id="2" maganszemely="true">
+      <nev>X3 Y3</nev>
+      <cim>
+        <iranyitoszam>3526</iranyitoszam>
+        <varos>Miskolc</varos>
+        <utca>Z</utca>
+        <hazszam>30</hazszam>
+      </cim>
+    </adomanyozott>
+  </adomanyozottak>
+  
+  <adomanyok>
+    <adomany adomanyozo="1234567890" adomanyozott="1">
+      <leiras>Adomány 1</leiras>
+      <ertek>10</ertek>
+    </adomany>
+    
+    <adomany adomanyozo="1234567891" adomanyozott="2">
+      <leiras>Adomány 2</leiras>
+      <ertek>20</ertek>
+    </adomany>
+  </adomanyok>
+</adomanyDB>

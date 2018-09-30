@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="konyvtari-nyilvantartas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="konyv" type="konyvTipus" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="konyvTipus">
+    <xs:sequence>
+      <xs:element name="szerzo" type="xs:string"/>
+      <xs:element name="cim" type="xs:string"/>
+      <xs:element name="evszam" type="xs:gYear"/>
+      <xs:element name="terjedelem" type="xs:positiveInteger"/>
+      <xs:element name="targyszavak">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="targyszo" type="xs:string" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="isbn" type="isbnTipus" use="required"/>
+  </xs:complexType>
+  
+  <xs:simpleType name="isbnTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]\d{3}-\d{4}-\d{2}-\d"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>

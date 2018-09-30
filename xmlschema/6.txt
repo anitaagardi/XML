@@ -1,0 +1,29 @@
+1. A b elem nem lehet gyökérelem, mert nem globálisan van definiálva.
+
+2. Az xs:all elem gyerekei csak xs:element elemek lehetnek, az xs:choice nem.
+
+3. Az xs:fractionDigits megszorítás nem szerepelhet xs:double típus esetén,
+   xs:decimal típus esetén jó lenne.
+
+4. A minOccurs és maxOccurs attribútumok default értéke 1.
+   Itt felüldefiniáltuk a minOccurs értékét 2-re, de a maxOccurs továbbra is 1.
+   Ezért 2=minOccurs > maxOccurs=1 ami hibás.
+
+5. Az XML dokumentum hibás, mert az a elem után csak 2 elem állhat, ezek
+   bármelyike lehet b vagy c elem. Az XML dokumentum akkor lenne helyes, ha pl.
+   az xs:choice 4-szer szerepelhetne.
+
+6. Az a elem struktúrája xs:sequence elemmel van megadva, ezért a b, c és d
+   elemeknek ebben a sorrendben kellene szerepelnie, sorrendjük nem
+   felcserélhető. Ezt a hibát kiküszöbölhetjük, ha az xs:sequence elemet
+   kicseréljük xs:all elemre a sémában.
+
+7. Itt a formátumokkal van probléma.
+   xs:date helyes formátuma: 2013-01-01
+   xs:time helyes formátuma: 10:00:00
+   xs:dateTime helyes formátuma: 2013-01-01T10:00:00
+
+8. Itt a séma névtere a default névtér, nem adtunk meg aliast.
+   Ennek ellenére a típusnál xs:anySimpleType szerepel, ami így helytelen.
+   Vagy meg kell adni az aliast és azt minden elem és típus esetén használni
+   kell, vagy el kell hagyni az xs: részt az anySimpleType elől.

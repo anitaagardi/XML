@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="autoDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="autok"/>
+        <xs:element ref="tulajdonosok"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="autok">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="auto" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="tulajdonosok">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tulajdonos" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="auto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="gyarto"/>
+        <xs:element ref="modell"/>
+      </xs:sequence>
+      <xs:attribute ref="rsz" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:attribute name="rsz">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Z]{3}-\d{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  
+  <xs:element name="gyarto" type="xs:string"/>
+  
+  <xs:element name="modell" type="xs:string"/>
+  
+  <xs:element name="tulajdonos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nev"/>
+        <xs:element ref="tulajdonosAutoi"/>
+      </xs:sequence>
+      <xs:attribute ref="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:attribute name="id" type="xs:positiveInteger"/>
+  
+  <xs:element name="nev" type="xs:string"/>
+  
+  <xs:element name="tulajdonosAutoi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="autoReferencia" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="autoReferencia">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Z]{3}-\d{3}"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  
+</xs:schema>

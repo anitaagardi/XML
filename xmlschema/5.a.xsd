@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="autoDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="autok" type="autokTipus"/>
+        <xs:element name="tulajdonosok" type="tulajdonosokTipus"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="autokTipus">
+    <xs:sequence>
+      <xs:element name="auto" type="autoTipus" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="tulajdonosokTipus">
+    <xs:sequence>
+      <xs:element name="tulajdonos" type="tulajdonosTipus" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="rendszamTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}-\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="autoTipus">
+    <xs:sequence>
+      <xs:element name="gyarto" type="xs:string"/>
+      <xs:element name="modell" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="rsz" type="rendszamTipus" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="tulajdonosTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="autok">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="auto" type="rendszamTipus" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+  </xs:complexType>
+  
+</xs:schema>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<egyed xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="2.e.xsd">
+  <tobberteku-tulajdonsag>
+    <resz>1</resz>
+    <resz>2</resz>
+    <resz>3</resz>
+  </tobberteku-tulajdonsag>
+</egyed>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="nevjegykartyak">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nevjegykartya" type="nevjegykartyaTipus" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="nevjegykartyaTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="ceg" type="cegTipus"/>
+      <xs:element name="beosztas" type="xs:string"/>
+      <xs:element name="telefonszam" type="telefonszamTipus"/>
+      <xs:element name="email" type="emailTipus"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="cegTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="cim" type="cimTipus"/>
+      <xs:element name="telefonszam" type="telefonszamTipus"/>
+      <xs:choice>
+        <xs:element name="weblap" type="weblapTipus"/>
+        <xs:element name="email" type="emailTipus"/>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="cimTipus">
+    <xs:sequence>
+      <xs:element name="iranyitoszam" type="iranyitoszamTipus"/>
+      <xs:element name="varos" type="xs:string"/>
+      <xs:element name="utca" type="xs:string"/>
+      <xs:element name="hazszam" type="xs:positiveInteger"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="iranyitoszamTipus">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1000"/>
+      <xs:maxInclusive value="9999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="telefonszamTipus">
+    <xs:simpleContent>
+      <xs:extension base="telefonszamStringTipus">
+        <xs:attribute name="korzet" type="korzetTipus" default="46"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:simpleType name="telefonszamStringTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(\d{3}-\d{3})|(\d{4}-\d{2}-\d{2})"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="korzetTipus">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="weblapTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="http://www\.(.*)\.(com|org|hu)"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="emailTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(.*)@(.*)\.(com|org|hu)"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="gyoker">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="egyed" type="egyedTipus" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:key name="kulcs">
+      <xs:selector xpath="egyed"/>
+      <xs:field xpath="@kulcs"/>
+    </xs:key>
+  </xs:element>
+  
+  <xs:complexType name="egyedTipus">
+    <xs:attribute name="kulcs" type="xs:int"/>
+  </xs:complexType>
+  
+</xs:schema>

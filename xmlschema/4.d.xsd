@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="auto" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!--
+    final="#all" esetén sem kibővíteni, sem korlátozni nem lehet
+    final="extension" esetén nem lehet kibővíteni
+    final="restriction" esetén nem lehet korlátozni
+  -->
+  <xs:complexType name="autoTipus" final="#all">
+    <xs:attribute name="id" type="xs:integer" use="required"/>
+  </xs:complexType>
+  
+  <!-- HIBA! Az autoTipus típust nem lehet kibővíteni! -->
+  <!--<xs:complexType name="kibovitettAutoTipus">
+    <xs:complexContent>
+      <xs:extension base="autoTipus">
+        <xs:sequence>
+          <xs:element name="gyarto" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>-->
+  
+  <!-- HIBA! Az autoTipus típust nem lehet korlátozni! -->
+  <!--<xs:complexType name="kibovitettAutoTipus">
+    <xs:complexContent>
+      <xs:restriction base="autoTipus">
+        <xs:attribute name="id" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>-->
+  
+  <xs:element name="auto" type="autoTipus" abstract="true"/>
+  <xs:element name="car" substitutionGroup="auto"/>
+  <xs:element name="wagen" substitutionGroup="auto"/>
+  
+</xs:schema>

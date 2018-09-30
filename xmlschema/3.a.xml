@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<softwareCompany xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="3.a.xsd">
+  <developers>
+    <developer developerID="1">
+      <name>X1 Y1</name>
+      <technologies>
+        <technology>C#</technology>
+        <technology>Java</technology>
+      </technologies>
+    </developer>
+    <developer developerID="2">
+      <name>X2 Y2</name>
+      <technologies>
+        <technology>C++</technology>
+      </technologies>
+    </developer>
+    <developer developerID="3">
+      <name>X3 Y3</name>
+      <technologies>
+        <technology>Java</technology>
+        <technology>C++</technology>
+        <technology>C#</technology>
+      </technologies>
+    </developer>
+    <developer developerID="4">
+      <name>X4 Y4</name>
+      <technologies>
+        <technology>Java</technology>
+      </technologies>
+    </developer>
+  </developers>
+  
+  <teams>
+    <team teamID="1">
+      <name>Team 1</name>
+      <members>
+        <member developerID="1"/>
+        <member developerID="2"/>
+      </members>
+    </team>
+    <team teamID="2">
+      <name>Team 2</name>
+      <members>
+        <member developerID="3"/>
+        <member developerID="4"/>
+      </members>
+    </team>
+  </teams>
+  
+  <projects>
+    <project projectID="1">
+      <name>Project 1</name>
+      <associatedTeams>
+        <associatedTeam teamID="1"/>
+        <associatedTeam teamID="2"/>
+      </associatedTeams>
+    </project>
+    <project projectID="2">
+      <name>Project 2</name>
+      <associatedTeams>
+        <associatedTeam teamID="2"/>
+      </associatedTeams>
+    </project>
+  </projects>
+  
+  <worklogs>
+    <worklog developer="1" date="2013-10-01">
+      <meeting projectID="1">1</meeting>
+      <meeting projectID="2">1</meeting>
+      <designing projectID="1">4</designing>
+      <programming projectID="1">2</programming>
+    </worklog>
+    <worklog developer="1" date="2013-10-02">
+      <meeting projectID="1">1</meeting>
+      <designing projectID="1">3</designing>
+      <programming projectID="1">3</programming>
+    </worklog>
+    <worklog developer="1" date="2013-10-03">
+      <meeting projectID="1">1</meeting>
+      <designing projectID="1">2</designing>
+      <programming projectID="1">3</programming>
+    </worklog>
+    <worklog developer="1" date="2013-10-04">
+      <meeting projectID="1">1</meeting>
+      <programming projectID="1">7</programming>
+    </worklog>
+    <worklog developer="1" date="2013-10-05">
+      <meeting projectID="1">1</meeting>
+      <programming projectID="1">5</programming>
+    </worklog>
+  </worklogs>
+</softwareCompany>

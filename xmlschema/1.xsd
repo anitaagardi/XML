@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ures-elem" type="uresElemTipus"/>
+        <xs:element name="ures-elem-attributummal1" type="uresElemAttributummal1Tipus" minOccurs="2" maxOccurs="2"/>
+        <xs:element name="ures-elem-attributummal2" type="uresElemAttributummal2Tipus" minOccurs="3" maxOccurs="3"/>
+        <xs:element name="text-only-gyari-tipussal" type="xs:string"/>
+        <xs:element name="sajat-string1" type="sajatString1Tipus" minOccurs="3" maxOccurs="3"/>
+        <xs:element name="sajat-string2" type="sajatString2Tipus" minOccurs="2" maxOccurs="2"/>
+        <xs:element name="sajat-string3" type="sajatString3Tipus"/>
+        <xs:element name="sajat-szam1" type="sajatSzam1Tipus" minOccurs="2" maxOccurs="2"/>
+        <xs:element name="sajat-szam2" type="sajatSzam2Tipus" minOccurs="2" maxOccurs="2"/>
+        <xs:element name="gyari-lista" type="gyariListaTipus"/>
+        <xs:element name="gyari-unio" type="gyariUnioTipus" minOccurs="2" maxOccurs="2"/>
+        <xs:element name="sajat-lista" type="sajatListaTipus"/>
+        <xs:element name="sajat-unio" type="sajatUnioTipus" minOccurs="2" maxOccurs="2"/>
+        <xs:element name="mixed" type="mixedTipus"/>
+        <xs:element name="child-only" type="childOnlyTipus"/>
+        <xs:element name="child-only-attributummal" type="childOnlyAttributummalTipus"/>
+        <xs:element name="korlatozott-child-only" type="korlatozottChildOnlyTipus"/>
+        <xs:element name="kibovitett-child-only" type="kibovitettChildOnlyTipus"/>
+        <xs:element name="telefonszam" type="telefonszamTipus"/>
+        <xs:element name="komplex-struktura1" type="komplexStruktura1Tipus"/>
+        <xs:element name="komplex-struktura2" type="komplexStruktura2Tipus"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="uresElemTipus">
+  </xs:complexType>
+  
+  <xs:complexType name="uresElemAttributummal1Tipus">
+    <xs:attribute name="x" type="xs:integer" use="required"/>
+    <xs:attribute name="y" type="xs:integer" use="optional"/>
+    <xs:attribute name="z" type="xs:integer" use="prohibited"/>
+  </xs:complexType>
+  
+  <xs:complexType name="uresElemAttributummal2Tipus">
+    <xs:attribute name="x" type="xs:integer" fixed="1"/>
+    <xs:attribute name="y" type="xs:integer" default="2"/>
+  </xs:complexType>
+  
+  <xs:simpleType name="sajatString1Tipus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="a"/>
+      <xs:enumeration value="b"/>
+      <xs:enumeration value="c"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="sajatString2Tipus">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3"/>
+      <xs:maxLength value="5"/>
+      <!--<xs:length value="3"/>-->
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="sajatString3Tipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z]{2}\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="sajatSzam1Tipus">
+    <xs:restriction base="xs:integer">
+      <xs:minExclusive value="0"/>
+      <xs:maxExclusive value="100"/>
+      <xs:totalDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="sajatSzam2Tipus">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0.01"/>
+      <xs:maxInclusive value="99.99"/>
+      <xs:fractionDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="gyariListaTipus">
+    <xs:list itemType="xs:boolean"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="gyariUnioTipus">
+    <xs:union memberTypes="xs:integer xs:double"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="sajatListaTipus">
+    <xs:list itemType="sajatSzam1Tipus"/>
+  </xs:simpleType>
+  
+  <xs:simpleType name="sajatUnioTipus">
+    <xs:union memberTypes="sajatSzam2Tipus xs:date"/>
+  </xs:simpleType>
+  
+  <xs:complexType name="mixedTipus" mixed="true">
+    <xs:sequence>
+      <xs:element name="a" type="xs:time"/>
+    </xs:sequence>
+    <xs:attribute name="x" type="xs:integer"/>
+  </xs:complexType>
+  
+  <xs:complexType name="childOnlyTipus">
+    <xs:sequence>
+      <xs:element name="a" type="xs:dateTime"/>
+      <xs:element name="b" minOccurs="2" maxOccurs="3"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="childOnlyAttributummalTipus">
+    <xs:sequence>
+      <xs:element name="a" type="xs:integer"/>
+    </xs:sequence>
+    <xs:attribute name="x" type="xs:integer"/>
+  </xs:complexType>
+  
+  <xs:complexType name="korlatozottChildOnlyTipus">
+    <xs:complexContent>
+      <xs:restriction base="childOnlyTipus">
+        <xs:sequence>
+          <!-- Az a elemet nem korlátozzuk, de fel kell tüntetni! -->
+          <xs:element name="a" type="xs:dateTime"/>
+          <xs:element name="b" minOccurs="2" maxOccurs="3">
+            <xs:simpleType>
+              <xs:restriction base="xs:integer">
+                <xs:minInclusive value="0"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="kibovitettChildOnlyTipus">
+    <xs:complexContent>
+      <xs:extension base="childOnlyTipus">
+        <xs:sequence>
+          <xs:element name="c" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:simpleType name="telefonszamStringTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{3}-\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="korzetTipus">
+    <xs:restriction base="xs:integer">
+      <xs:totalDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="telefonszamTipus">
+    <xs:simpleContent>
+      <xs:extension base="telefonszamStringTipus">
+        <xs:attribute name="korzet" type="korzetTipus" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:complexType name="komplexStruktura1Tipus">
+    <xs:sequence>
+      <xs:element name="a" type="xs:integer"/>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element name="b" type="xs:integer"/>
+          <xs:element name="c" type="xs:integer"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element name="c" type="xs:integer"/>
+          <xs:element name="b" type="xs:integer"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="komplexStruktura2Tipus">
+    <xs:sequence>
+      <xs:element name="a" type="xs:integer"/>
+      <xs:choice minOccurs="2" maxOccurs="2">
+        <xs:sequence>
+          <xs:element name="b" type="xs:integer"/>
+          <xs:element name="c" type="xs:integer"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element name="c" type="xs:integer"/>
+          <xs:element name="b" type="xs:integer"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

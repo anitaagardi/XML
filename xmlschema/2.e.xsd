@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="egyed" type="egyedTipus"/>
+  
+  <xs:complexType name="egyedTipus">
+    <xs:sequence>
+      <xs:element name="tobberteku-tulajdonsag" type="tobbertekuTulajdonsagTipus"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="tobbertekuTulajdonsagTipus">
+    <xs:sequence>
+      <xs:element name="resz" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>
