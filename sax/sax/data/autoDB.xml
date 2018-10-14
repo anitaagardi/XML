@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:autoDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://iit.uni-miskolc.hu/xml/autok autoDB.xsd"
+          xmlns:a="http://iit.uni-miskolc.hu/xml/autok">
+  
+  <a:autok>
+    <a:auto a:rsz="ABC-123">
+      <a:gyarto>Honda</a:gyarto>
+      <a:szin>feher</a:szin>
+    </a:auto>
+    <a:auto a:rsz="ABC-124">
+      <a:gyarto>BMW</a:gyarto>
+      <a:szin>kek</a:szin>
+    </a:auto>
+    <a:auto a:rsz="ABC-125">
+      <a:gyarto>Mercedes</a:gyarto>
+      <a:szin>fekete</a:szin>
+    </a:auto>
+    <a:auto a:rsz="ABC-126">
+      <a:gyarto>Kia</a:gyarto>
+      <a:szin>kek</a:szin>
+    </a:auto>
+    <a:auto a:rsz="ABC-127">
+      <a:gyarto>Hyundai</a:gyarto>
+      <a:szin>ezust</a:szin>
+    </a:auto>
+    <a:auto a:rsz="ABC-128">
+      <a:gyarto>Honda</a:gyarto>
+      <a:szin>kek</a:szin>
+    </a:auto>
+  </a:autok>
+  
+  <a:tulajdonosok>
+    <a:tulajdonos a:id="1">
+      <a:fizetes>10</a:fizetes>
+      <a:autok>
+        <a:auto>ABC-123</a:auto>
+      </a:autok>
+    </a:tulajdonos>
+    <a:tulajdonos a:id="2">
+      <a:fizetes>15</a:fizetes>
+      <a:autok>
+        <a:auto>ABC-124</a:auto>
+        <a:auto>ABC-125</a:auto>
+      </a:autok>
+    </a:tulajdonos>
+    <a:tulajdonos a:id="3">
+      <a:fizetes>20</a:fizetes>
+      <a:autok>
+        <a:auto>ABC-127</a:auto>
+      </a:autok>
+    </a:tulajdonos>
+    <a:tulajdonos a:id="4">
+      <a:fizetes>25</a:fizetes>
+      <a:autok>
+        <a:auto>ABC-126</a:auto>
+        <a:auto>ABC-128</a:auto>
+      </a:autok>
+    </a:tulajdonos>
+  </a:tulajdonosok>
+  
+</a:autoDB>

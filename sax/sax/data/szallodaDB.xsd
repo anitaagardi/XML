@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://iit.uni-miskolc.hu/xml/szalloda"
+        xmlns:sz="http://iit.uni-miskolc.hu/xml/szalloda"
+        elementFormDefault="qualified">
+  
+  <xs:element name="szallodaDB" type="sz:szallodaDBTipus">
+    <xs:key name="szobaKey">
+      <xs:selector xpath="sz:szobak/sz:szoba"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    
+    <xs:key name="vendegKey">
+      <xs:selector xpath="sz:vendegek/sz:vendeg"/>
+      <xs:field xpath="@szisz"/>
+    </xs:key>
+    
+    <xs:keyref name="foglalasVendegKeyref" refer="sz:vendegKey">
+      <xs:selector xpath="sz:foglalasok/sz:foglalas"/>
+      <xs:field xpath="@vendeg"/>
+    </xs:keyref>
+    
+    <xs:keyref name="foglalasSzobaKeyref" refer="sz:szobaKey">
+      <xs:selector xpath="sz:foglalasok/sz:foglalas"/>
+      <xs:field xpath="@szoba"/>
+    </xs:keyref>
+  </xs:element>
+  
+  <xs:complexType name="szallodaDBTipus">
+    <xs:sequence>
+      <xs:element name="szobak" type="sz:szobakTipus"/>
+      <xs:element name="vendegek" type="sz:vendegekTipus"/>
+      <xs:element name="foglalasok" type="sz:foglalasokTipus"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="szobakTipus">
+    <xs:sequence>
+      <xs:element name="szoba" type="sz:szobaTipus" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="szobaTipus">
+    <xs:sequence>
+      <xs:element name="leiras" type="sz:leirasTipus"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="sz:szobaIdTipus" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="leirasTipus">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="lakosztaly" type="xs:boolean" default="false"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:simpleType name="szobaIdTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]-\d-\d+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="vendegekTipus">
+    <xs:sequence>
+      <xs:element name="vendeg" type="sz:vendegTipus" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="vendegTipus">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="szisz" type="sz:sziszTipus" use="required"/>
+  </xs:complexType>
+  
+  <xs:simpleType name="sziszTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{6}[A-Z]{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="foglalasokTipus">
+    <xs:sequence>
+      <xs:element name="foglalas" type="sz:foglalasTipus" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="foglalasTipus">
+    <xs:attribute name="vendeg" type="sz:sziszTipus" use="required"/>
+    <xs:attribute name="szoba" type="sz:szobaIdTipus" use="required"/>
+  </xs:complexType>
+  
+</xs:schema>

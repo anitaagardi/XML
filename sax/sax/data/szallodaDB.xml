@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sz:szallodaDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://iit.uni-miskolc.hu/xml/szalloda szallodaDB.xsd"
+               xmlns:sz="http://iit.uni-miskolc.hu/xml/szalloda">
+  
+  <sz:szobak>
+    <sz:szoba id="A-1-102">
+      <sz:leiras lakosztaly="true">x</sz:leiras>
+    </sz:szoba>
+    
+    <sz:szoba id="B-2-13">
+      <sz:leiras>y</sz:leiras>
+    </sz:szoba>
+  </sz:szobak>
+  
+  <sz:vendegek>
+    <sz:vendeg szisz="123456AB">
+      <sz:nev>John Doe</sz:nev>
+    </sz:vendeg>
+    
+    <sz:vendeg szisz="123456AC">
+      <sz:nev>X Y</sz:nev>
+    </sz:vendeg>
+  </sz:vendegek>
+  
+  <sz:foglalasok>
+    <sz:foglalas vendeg="123456AB" szoba="A-1-102"/>
+    <sz:foglalas vendeg="123456AC" szoba="B-2-13"/>
+    <sz:foglalas vendeg="123456AB" szoba="B-2-13"/>
+    <sz:foglalas vendeg="123456AB" szoba="A-1-102"/>
+  </sz:foglalasok>
+  
+</sz:szallodaDB>
