@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="beadando" xmlns="beadando" elementFormDefault="qualified">
+
+	<xs:complexType name="nevtipus">
+		<xs:sequence>
+			<xs:element name="vezeteknev" type="xs:string" />
+			<xs:element name="keresztnev" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="lakcimtipus">
+		<xs:sequence>
+			<xs:element name="irsz">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1000" />
+						<xs:maxInclusive value="9999" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="varos" type="xs:string" />
+			<xs:element name="utca" type="xs:string" />
+			<xs:element name="hazszam">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:maxInclusive value="100" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="datum_tipus">
+		<xs:sequence>
+			<xs:element name="ev">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:totalDigits value="4"></xs:totalDigits>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="honap">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:maxInclusive value="12" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nap">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:maxInclusive value="31" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="alkalmazottak_tipus">
+		<xs:sequence>
+			<xs:element name="nev" type="nevtipus" />
+			<xs:element name="szuletesi_hely" type="xs:string" />
+			<xs:element name="szuletesi_datum" type="datum_tipus" />
+			<xs:element name="lakcim" type="lakcimtipus" />
+			<xs:element name="beosztas">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="főnök" />
+						<xs:enumeration value="eladó" />
+						<xs:enumeration value="raktáros" />
+						<xs:enumeration value="minőségellenörző" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="alkalmazott_szigsz" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{6}[A-Z]{2}" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="termekref" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:pattern value="[0-9]{13}" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="szallitok_tipus">
+		<xs:sequence>
+			<xs:element name="nev" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="adoszam" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:pattern value="[0-9]{10}" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="termek_vonalkod" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:pattern value="[0-9]{13}" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+
+	<xs:complexType name="termekek_tipus">
+		<xs:sequence>
+			<xs:element name="nev" type="xs:string" />
+			<xs:element name="darabszam" type="xs:integer" />
+			<xs:element name="ervenyesseg" type="datum_tipus" />
+			<xs:element name="szarmazasi_hely" type="xs:string" />
+		</xs:sequence>
+
+		<xs:attribute name="vonalkod" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:pattern value="[0-9]{13}" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="alkalmazottref" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{6}[A-Z]{2}" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+
+	<xs:complexType name="vasarlok_tipus">
+		<xs:sequence>
+			<xs:element name="nev" type="nevtipus" />
+			<xs:element name="lakcim" type="lakcimtipus" />
+		</xs:sequence>
+		<xs:attribute name="vasarlo_szigsz" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9]{6}[A-Z]{2}" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+
+	<xs:complexType name="rendelesek_tipus">
+		<xs:sequence>
+			<xs:element name="datum" type="datum_tipus" />
+			<xs:element name="termek_db" type="xs:integer" />
+		</xs:sequence>
+		<xs:attribute name="termekref" type="xs:integer" use="required" />
+		<xs:attribute name="vasarloref" type="xs:string" use="required" />
+	</xs:complexType>
+
+
+
+	<xs:element name="Zöldseges">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="alkalmazott" type="alkalmazottak_tipus"
+					maxOccurs="unbounded" />
+				<xs:element name="vasarlo" type="vasarlok_tipus"
+					maxOccurs="unbounded" />
+				<xs:element name="termek" type="termekek_tipus"
+					maxOccurs="unbounded" />
+				<xs:element name="rendeles" type="rendelesek_tipus"
+					maxOccurs="unbounded" />
+				<xs:element name="szallito" type="szallitok_tipus"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="key1">
+			<xs:selector xpath="alkalmazott" />
+			<xs:field xpath="@alkalmazott_szigsz" />
+		</xs:key>
+
+		<xs:key name="key2">
+			<xs:selector xpath="vasarlo" />
+			<xs:field xpath="@vasarlo_szigsz" />
+		</xs:key>
+
+		<xs:key name="key3">
+			<xs:selector xpath="termek" />
+			<xs:field xpath="@vonalkod" />
+		</xs:key>
+
+		<xs:key name="key4">
+			<xs:selector xpath="szallito" />
+			<xs:field xpath="@adoszam" />
+		</xs:key>
+
+
+		<xs:keyref name="keyref1" refer="key3">
+			<xs:selector xpath="szallito" />
+			<xs:field xpath="@termek_vonalkod" />
+		</xs:keyref>
+
+		<xs:keyref name="keyref2" refer="key3">
+			<xs:selector xpath="rendeles" />
+			<xs:field xpath="@termekref" />
+		</xs:keyref>
+
+		<xs:keyref name="keyref3" refer="key2">
+			<xs:selector xpath="rendeles" />
+			<xs:field xpath="@vasarloref" />
+		</xs:keyref>
+
+
+		<xs:keyref name="keyref5" refer="key1">
+			<xs:selector xpath="termek" />
+			<xs:field xpath="@alkalmazottref" />
+		</xs:keyref>
+
+		<xs:keyref name="keyref6" refer="key3">
+			<xs:selector xpath="alkalmazott" />
+			<xs:field xpath="@termekref" />
+		</xs:keyref>
+
+	</xs:element>
+
+</xs:schema>

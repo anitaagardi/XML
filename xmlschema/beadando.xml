@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Zöldseges xmlns="beadando" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="beadando beadando.xsd ">
+	<alkalmazott alkalmazott_szigsz="111111RR" termekref="1234567891234">
+		<nev>
+			<vezeteknev>Kuczik</vezeteknev>
+			<keresztnev>Tamás</keresztnev>
+		</nev>
+		<szuletesi_hely>Miskolc</szuletesi_hely>
+		<szuletesi_datum>
+			<ev>1970</ev>
+			<honap>4</honap>
+			<nap>1</nap>
+		</szuletesi_datum>
+		<lakcim>
+			<irsz>5000</irsz>
+			<varos>Tiszafüred</varos>
+			<utca>Homok</utca>
+			<hazszam>9</hazszam>
+		</lakcim>
+		<beosztas>raktáros</beosztas>
+	</alkalmazott>
+	<alkalmazott alkalmazott_szigsz="111113RR" termekref="1234567891234">
+		<nev>
+			<vezeteknev>Molnár</vezeteknev>
+			<keresztnev>Gábor</keresztnev>
+		</nev>
+		<szuletesi_hely>Miskolc</szuletesi_hely>
+		<szuletesi_datum>
+			<ev>1969</ev>
+			<honap>3</honap>
+			<nap>5</nap>
+		</szuletesi_datum>
+		<lakcim>
+			<irsz>4400</irsz>
+			<varos>Nyiregyháza</varos>
+			<utca>Dózsa György út</utca>
+			<hazszam>20</hazszam>
+		</lakcim>
+		<beosztas>főnök</beosztas>
+	</alkalmazott>
+	<alkalmazott alkalmazott_szigsz="111115QR" termekref="1234567891234">
+		<nev>
+			<vezeteknev>Kovács</vezeteknev>
+			<keresztnev>Péter</keresztnev>
+		</nev>
+		<szuletesi_hely>Miskolc</szuletesi_hely>
+		<szuletesi_datum>
+			<ev>1975</ev>
+			<honap>1</honap>
+			<nap>28</nap>
+		</szuletesi_datum>
+		<lakcim>
+			<irsz>3515</irsz>
+			<varos>Miskolc</varos>
+			<utca>Boldog utca</utca>
+			<hazszam>10</hazszam>
+		</lakcim>
+		<beosztas>raktáros</beosztas>
+	</alkalmazott>
+	<alkalmazott alkalmazott_szigsz="111665QY" termekref="1234567891234">
+		<nev>
+			<vezeteknev>Magyar</vezeteknev>
+			<keresztnev>László</keresztnev>
+		</nev>
+		<szuletesi_hely>Vásárosnamény</szuletesi_hely>
+		<szuletesi_datum>
+			<ev>1991</ev>
+			<honap>06</honap>
+			<nap>20</nap>
+		</szuletesi_datum>
+		<lakcim>
+			<irsz>3515</irsz>
+			<varos>Miskolc</varos>
+			<utca>Március utca</utca>
+			<hazszam>55</hazszam>
+		</lakcim>
+		<beosztas>minőségellenörző</beosztas>
+	</alkalmazott>
+	<vasarlo vasarlo_szigsz="623456AA">
+		<nev>
+			<vezeteknev>Milner</vezeteknev>
+			<keresztnev>Gábor</keresztnev>
+		</nev>
+		<lakcim>
+			<irsz>3515</irsz>
+			<varos>Miskolc</varos>
+			<utca>Egyetemváros</utca>
+			<hazszam>4</hazszam>
+		</lakcim>
+	</vasarlo>
+	<vasarlo vasarlo_szigsz="623499CA">
+		<nev>
+			<vezeteknev>Ács</vezeteknev>
+			<keresztnev>Miklós</keresztnev>
+		</nev>
+		<lakcim>
+			<irsz>1350</irsz>
+			<varos>Budapest</varos>
+			<utca>Parlament út</utca>
+			<hazszam>22</hazszam>
+		</lakcim>
+	</vasarlo>
+	<vasarlo vasarlo_szigsz="188499QQ">
+		<nev>
+			<vezeteknev>Barabás</vezeteknev>
+			<keresztnev>Péter</keresztnev>
+		</nev>
+		<lakcim>
+			<irsz>3535</irsz>
+			<varos>Miskolc</varos>
+			<utca>Magyar út</utca>
+			<hazszam>33</hazszam>
+		</lakcim>
+	</vasarlo>
+	<termek alkalmazottref="891234AE" vonalkod="1234567890123">
+		<nev>Paprika</nev>
+		<darabszam>50</darabszam>
+		<ervenyesseg>
+			<ev>2015</ev>
+			<honap>1</honap>
+			<nap>1</nap>
+		</ervenyesseg>
+		<szarmazasi_hely>Magyarország</szarmazasi_hely>
+	</termek>
+	<termek alkalmazottref="891234AE" vonalkod="9988867890123">
+		<nev>Saláta</nev>
+		<darabszam>2000</darabszam>
+		<ervenyesseg>
+			<ev>2012</ev>
+			<honap>12</honap>
+			<nap>21</nap>
+		</ervenyesseg>
+		<szarmazasi_hely>Magyarország</szarmazasi_hely>
+	</termek>
+	<termek alkalmazottref="891234AE" vonalkod="1234567890223">
+		<nev>Uborka</nev>
+		<darabszam>50</darabszam>
+		<ervenyesseg>
+			<ev>2012</ev>
+			<honap>12</honap>
+			<nap>31</nap>
+		</ervenyesseg>
+		<szarmazasi_hely>Magyarország</szarmazasi_hely>
+	</termek>
+	<termek alkalmazottref="891234AE" vonalkod="1234588880221">
+		<nev>Kókuszdió</nev>
+		<darabszam>300</darabszam>
+		<ervenyesseg>
+			<ev>2013</ev>
+			<honap>06</honap>
+			<nap>10</nap>
+		</ervenyesseg>
+		<szarmazasi_hely>Japán félsziget</szarmazasi_hely>
+	</termek>
+	<termek alkalmazottref="891234AE" vonalkod="1234567893123">
+		<nev>Uborka(német)</nev>
+		<darabszam>100</darabszam>
+		<ervenyesseg>
+			<ev>2012</ev>
+			<honap>6</honap>
+			<nap>6</nap>
+		</ervenyesseg>
+		<szarmazasi_hely>Németország</szarmazasi_hely>
+	</termek>
+	<rendeles termekref="1234567890123" vasarloref="623499CA">
+		<datum>
+			<ev>2012</ev>
+			<honap>05</honap>
+			<nap>05</nap>
+		</datum>
+		<termek_db>30</termek_db>
+	</rendeles>
+	<rendeles termekref="1234567893123" vasarloref="188499QQ">
+		<datum>
+			<ev>2012</ev>
+			<honap>11</honap>
+			<nap>05</nap>
+		</datum>
+		<termek_db>30</termek_db>
+	</rendeles>
+	<szallito adoszam="1234512345" termek_vonalkod="1234588880221">
+		<nev>Géza kft</nev>
+	</szallito>
+	<szallito adoszam="1234511345" termek_vonalkod="1234567890123">
+		<nev>Semmi zrt</nev>
+	</szallito>
+	<szallito adoszam="1234515345" termek_vonalkod="1234588880221">
+		<nev>Kaja zrt</nev>
+	</szallito>
+	<szallito adoszam="1666666665" termek_vonalkod="1234567893123">
+		<nev>Uborka zrt</nev>
+	</szallito>
+	<szallito adoszam="1662222665" termek_vonalkod="1234567890123">
+		<nev>Wubi kft</nev>
+	</szallito>
+	<szallito adoszam="1666664665" termek_vonalkod="1234567893123">
+		<nev>Galóca kft</nev>
+	</szallito>
+</Zöldseges>
