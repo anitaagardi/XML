@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://iit.uni-miskolc.hu/xml/cars cars.xsd"
+      xmlns="http://iit.uni-miskolc.hu/xml/cars">
+  
+  <car>
+    <manufacturer>Honda</manufacturer>
+    <color>white</color>
+    <price>5.2</price>
+  </car>
+  
+  <car>
+    <manufacturer>BMW</manufacturer>
+    <color>blue</color>
+    <price>4.5</price>
+  </car>
+  
+  <car>
+    <manufacturer>Mercedes</manufacturer>
+    <color>black</color>
+    <price>7.4</price>
+  </car>
+  
+  <car>
+    <manufacturer>Kia</manufacturer>
+    <color>blue</color>
+    <price>3.8</price>
+  </car>
+  
+  <car>
+    <manufacturer>Honda</manufacturer>
+    <color>black</color>
+    <price>6.1</price>
+  </car>
+  
+  <car>
+    <manufacturer>Hyundai</manufacturer>
+    <color>silver</color>
+    <price>4.2</price>
+  </car>
+  
+  <car>
+    <manufacturer>Honda</manufacturer>
+    <color>blue</color>
+    <price>5</price>
+  </car>
+  
+</cars>
