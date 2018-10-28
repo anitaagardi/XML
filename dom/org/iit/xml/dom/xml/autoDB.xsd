@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://iit.uni-miskolc.hu/xml/autok"
+           xmlns:a="http://iit.uni-miskolc.hu/xml/autok"
+           elementFormDefault="qualified"
+           attributeFormDefault="qualified">
+  
+  <xs:element name="autoDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="autok">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="auto" type="a:autoTipus" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="tulajdonosok">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tulajdonos" type="a:tulajdonosTipus" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:key name="autoKey">
+      <xs:selector xpath="a:autok/a:auto"/>
+      <xs:field xpath="@a:rsz"/>
+    </xs:key>
+    
+    <xs:key name="tulajdonosKey">
+      <xs:selector xpath="a:tulajdonosok/a:tulajdonos"/>
+      <xs:field xpath="@a:id"/>
+    </xs:key>
+    
+    <xs:keyref name="tulajdonosAutoKeyRef" refer="a:autoKey">
+      <xs:selector xpath="a:tulajdonosok/a:tulajdonos/a:autok/a:auto"/>
+      <xs:field xpath="."/>
+    </xs:keyref>
+    
+    <xs:unique name="tulajdonosAutoUnique">
+      <xs:selector xpath="a:tulajdonosok/a:tulajdonos/a:autok/a:auto"/>
+      <xs:field xpath="."/>
+    </xs:unique>
+  </xs:element>
+  
+  <xs:simpleType name="rendszamTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}-\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="autoTipus">
+    <xs:sequence>
+      <xs:element name="gyarto" type="xs:string"/>
+      <xs:element name="szin" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="rsz" type="a:rendszamTipus" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="tulajdonosTipus">
+    <xs:sequence>
+      <xs:element name="fizetes" type="xs:integer"/>
+      <xs:element name="autok">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="auto" type="a:rendszamTipus" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:integer" use="required"/>
+  </xs:complexType>
+  
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-styleshet type="txt/xsl" href="s1.xsl"?>
+<autok xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="file:/I:/N%C3%A9bli%20Zolt%C3%A1n%20xml%20gyak/autok-auto.xsd">
+    <auto rsz="aaa-123">
+        <tipus>opel</tipus>
+        <ar>324234</ar>
+        <ev>1981</ev>
+    </auto>
+
+<auto rsz="aab-321">
+    <tipus>FIAT</tipus>
+    <ar>3244</ar>
+    <ev>2005</ev>
+</auto>
+
+<auto rsz="afe-125">
+    <tipus>trabant</tipus>
+    <ar>193554</ar>
+    <ev>1943</ev>
+</auto>
+
+<auto rsz="bbf-144">
+    <tipus>bmw</tipus>
+    <ar>1112</ar>
+    <ev>1999</ev>
+</auto>
+</autok>

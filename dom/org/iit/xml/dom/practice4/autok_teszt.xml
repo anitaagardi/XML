@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="auto.xsi"?>
+<auto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/H:/xml/gyak6/autok.xsd">
+    <auto rsz="JAJ-999">
+        <tipus>Mustang</tipus>
+        <ar>10000000</ar>
+        <evjarat>2006</evjarat>
+    </auto>
+    
+    <auto rsz="JAX-649">
+        <tipus>Lada</tipus>
+        <ar>10000</ar>
+        <evjarat>2006</evjarat>
+    </auto>
+    
+    <auto rsz="ABC-123">
+        <tipus>Trabant</tipus>
+        <ar>5</ar>
+        <evjarat>1985</evjarat>
+    </auto>
+    
+    <auto rsz="HOK-122">
+        <tipus>Porsche</tipus>
+        <ar>4000000</ar>
+        <evjarat>2007</evjarat>
+    </auto>
+    
+    <auto rsz="HOK-123">
+        <tipus>Audi</tipus>
+        <ar>40000</ar>
+        <evjarat>2005</evjarat>
+    </auto>
+    
+    <auto rsz="AXK-023">
+        <tipus>Audi</tipus>
+        <ar>10000</ar>
+        <evjarat>2001</evjarat>
+    </auto>
+    
+    <auto rsz="HAM-923">
+        <tipus>Audi</tipus>
+        <ar>50000</ar>
+        <evjarat>2006</evjarat>
+    </auto>
+    
+    <auto rsz="CSK-001">
+        <tipus>Audi</tipus>
+        <ar>55000</ar>
+        <evjarat>2002</evjarat>
+    </auto>
+</auto>
