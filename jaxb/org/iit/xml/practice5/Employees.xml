@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employees>
+    <employee>
+        <id>15</id>
+        <firstName>Lokesh</firstName>
+        <lastName>Gupta</lastName>
+        <income>100.0</income>
+    </employee>
+    <employee>
+        <id>15</id>
+        <firstName>John</firstName>
+        <lastName>Mclane</lastName>
+        <income>200.0</income>
+    </employee>
+    <employee>
+        <id>15</id>
+        <firstName>XYZ</firstName>
+        <lastName>ABC</lastName>
+        <income>1000.0</income>
+    </employee>
+    <employee>
+        <id>3</id>
+        <firstName>XYZ</firstName>
+        <lastName>ABC</lastName>
+        <income>1000.0</income>
+    </employee>
+</employees>
