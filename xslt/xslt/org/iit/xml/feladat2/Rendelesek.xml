@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="felad2xslt.xsl"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="file:/C:/Users/User/Documents/OxygenXMLEditor/samples/rendschema.xsd">
+    <Customers>
+        <Customer CustomerID="d1">
+            <CompanyName>cég1</CompanyName>
+            <ContactName>béla</ContactName>
+            <ContactTitle>fogorvos</ContactTitle>
+            <Phone>124345</Phone>
+            <Fax>325325</Fax>
+            <FullAddress>
+                <Address>kalap utca</Address>
+                <City>salgótarján</City>
+                <Region>nógrád</Region>
+                <PostalCode>3242</PostalCode>
+                <Country>japán</Country>
+                <Price>43534</Price>
+            </FullAddress>
+        </Customer>
+    </Customers>
+    <Orders>
+        <Order>
+            <CustomerID>d1</CustomerID>
+            <EmployeeID>e1</EmployeeID>
+            <OrderDate>2004-12-10T06:15:54</OrderDate>
+            <RequiredDate>2005-03-14T06:21:12</RequiredDate>
+            <ShipInfo ShippedDate="2005-02-12T05:10:22">
+                <ShipVia>2</ShipVia>
+                <Freight>14</Freight>
+                <ShipName>Nagyhajó</ShipName>
+                <ShipAddress>kötény utca</ShipAddress>
+                <ShipCity>tokió</ShipCity>
+                <ShipRegion>régió</ShipRegion>
+                <ShipPostalCode>3342</ShipPostalCode>
+                <ShipCountry>kína</ShipCountry>
+            </ShipInfo>
+        </Order>
+    </Orders>
+</Root>

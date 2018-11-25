@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="mav2.xsl"?>
+<mav:adatbazis xmlns:mav="http://iit.uni-miskolc.hu/sema/mav" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://iit.uni-miskolc.hu/sema/mav  file:sema.xsd" >
+<mav:sofor id="s1">
+<mav:nev> 
+<mav:vezeteknev>Kiss</mav:vezeteknev>
+<mav:keresztnev>Janos</mav:keresztnev>
+</mav:nev>
+<mav:ber>
+ <mav:netto> 464656</mav:netto>
+    <mav:brutto>4654</mav:brutto>
+</mav:ber>
+<mav:munkaora>8</mav:munkaora>
+</mav:sofor>	
+<mav:sofor id="s2">
+<mav:nev>
+<mav:vezeteknev>Nagy</mav:vezeteknev>
+<mav:keresztnev>Jolan</mav:keresztnev>
+</mav:nev>
+<mav:ber>
+    <mav:netto> 4646</mav:netto>
+    <mav:brutto>464</mav:brutto>
+</mav:ber>
+<mav:munkaora>10</mav:munkaora>
+</mav:sofor>
+<mav:sofor id="s3">
+<mav:nev> 
+<mav:vezeteknev>Ber</mav:vezeteknev>
+<mav:keresztnev>Bela</mav:keresztnev>
+</mav:nev>
+<mav:ber>
+    <mav:netto> 46656</mav:netto>
+    <mav:brutto>4654</mav:brutto>
+</mav:ber>
+<mav:munkaora>8</mav:munkaora>
+</mav:sofor>
+
+<mav:jarat id="j1" soforid="s1">
+<mav:idotartam>
+    <mav:ora>14</mav:ora>
+    <mav:perc>54</mav:perc>
+</mav:idotartam>
+    <mav:indulas>
+        <mav:ora>4</mav:ora>
+        <mav:perc>45</mav:perc>
+    </mav:indulas>
+</mav:jarat>
+
+<mav:jarat id="j2" soforid="s1" >
+
+    <mav:idotartam> 
+        <mav:ora>14</mav:ora>
+        <mav:perc>54</mav:perc>
+    </mav:idotartam>
+    <mav:indulas>
+        <mav:ora>8</mav:ora>
+        <mav:perc>4</mav:perc>
+    </mav:indulas>
+	
+</mav:jarat>
+<mav:jarat id="j3" soforid="s2">
+<mav:idotartam> 
+    <mav:ora>14</mav:ora>
+    <mav:perc>54</mav:perc>
+</mav:idotartam>
+    <mav:indulas>
+        <mav:ora>8</mav:ora>
+        <mav:perc>4</mav:perc>
+    </mav:indulas>
+</mav:jarat>
+
+<mav:utas id="u1">
+<mav:nev>
+<mav:vezeteknev>Kiss</mav:vezeteknev>
+<mav:keresztnev>Bela</mav:keresztnev>
+</mav:nev>
+<mav:kor>25  </mav:kor>
+
+</mav:utas>
+
+<mav:utas id="u2">
+<mav:nev>
+<mav:vezeteknev>Joo</mav:vezeteknev>
+<mav:keresztnev>Janos</mav:keresztnev>
+</mav:nev>
+<mav:kor>15  </mav:kor>
+
+</mav:utas>
+
+<mav:utas id="u3">
+<mav:nev> 
+<mav:vezeteknev>Kovas</mav:vezeteknev>
+<mav:keresztnev>Krisztina</mav:keresztnev>
+</mav:nev>
+<mav:kor>35  </mav:kor>
+
+</mav:utas>
+<mav:ellenor>
+<mav:nev>
+<mav:vezeteknev>Nagy</mav:vezeteknev>
+<mav:keresztnev>Geza</mav:keresztnev>
+</mav:nev>
+<mav:buntetes kit="u2">
+    <mav:helyben>5000</mav:helyben>
+    <mav:csekken>10000</mav:csekken>
+</mav:buntetes>
+
+</mav:ellenor>
+
+<mav:ellenor>
+<mav:nev> 
+<mav:vezeteknev>Garas</mav:vezeteknev>
+<mav:keresztnev>Elemer</mav:keresztnev>
+</mav:nev>
+<mav:buntetes kit="u3">
+    <mav:helyben>5000</mav:helyben>
+    <mav:csekken>10000</mav:csekken>
+
+</mav:buntetes>
+
+</mav:ellenor>
+
+</mav:adatbazis>

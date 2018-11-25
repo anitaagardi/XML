@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt1.xsl" ?>
+<vizsgakozpont >
+   <oktatok>
+         <oktato kod="O1">
+             <nev>Pance Miklós</nev>
+             <tel> 1234</tel>
+         </oktato>  
+       <oktato kod="O2">
+           <nev>Kovács László</nev>
+           <tel> 3415</tel>
+       </oktato>
+       <oktato kod="O3">
+           <nev>Barabás Péter</nev>
+           <tel> 3415</tel>
+       </oktato>         
+       <oktato kod="O4">
+           <nev>Tóth Tibor</nev>
+           <tel> 3222</tel>
+       </oktato>   
+       <oktato kod="O5">
+           <nev>Ficsor Lajos</nev>
+           <tel> 1333</tel>
+       </oktato>     
+       <oktato kod="O6">
+           <nev>Krizsan Zoltan</nev>
+           <tel> 1333</tel>
+       </oktato>  
+       <oktato kod="O7">
+           <nev>Kovács Szilveszter</nev>
+           <tel> 1234</tel>
+       </oktato>     </oktatok>
+
+    <vizsgak>
+    <vizsga vid="vizsga1">
+        <datum>2008.01.06</datum>
+        <kezdes>10:00</kezdes>
+        <targy>Programozás alapjai</targy>
+        <vizsgaztato kod="O1"/>
+        <terem>I. ea</terem>
+        <letszam>50</letszam>
+    </vizsga>
+    <vizsga vid="vizsga2">
+        <datum>2008.01.06</datum>
+        <kezdes>09:00</kezdes>
+        <targy>Adatkezelés XML-es környezetben</targy>
+        <vizsgaztato kod="O2"/>
+        <vizsgaztato kod="O3"/>
+        <terem>In100</terem>
+        <letszam>20</letszam>
+    </vizsga>
+    <vizsga vid="vizsga3">
+        <datum>2008.01.13</datum>
+        <kezdes>09:00</kezdes>
+        <targy>Adatkezelés XML-es környezetben</targy>
+        <vizsgaztato kod="O2" />
+        <vizsgaztato kod="O3" />
+        <terem>In100</terem>
+        <letszam>25</letszam>
+    </vizsga>
+    <vizsga vid="vizsga4">
+        <datum>2008.01.20</datum>
+        <kezdes>09:00</kezdes>
+        <targy>Adatkezelés XML-es környezetben</targy>
+        <vizsgaztato kod="O2"/>
+        <terem>In100</terem>
+        <letszam>25</letszam>
+    </vizsga>
+    <vizsga vid="vizsga5">
+        <datum>2008.01.03</datum>
+        <kezdes>08:00</kezdes>
+        <targy>Műszaki kommunikáció</targy>
+        <vizsgaztato kod="O4"/>
+        <terem>A/1 117</terem>
+        <letszam>50</letszam>
+    </vizsga>
+    <vizsga vid="vizsga6">
+        <datum>2008.01.17</datum>
+        <kezdes>10:00</kezdes>
+        <targy>Műszaki kommunikáció</targy>
+        <vizsgaztato kod="O4"/>
+        <terem>A/1 117</terem>
+        <letszam>40</letszam>
+    </vizsga>
+    <vizsga vid="vizsga7">
+        <datum>2008.01.22</datum>
+        <kezdes>08:00</kezdes>
+        <targy>Műszaki kommunikáció</targy>
+        <vizsgaztato kod="O5"/>
+        <terem>A/1 22</terem>
+        <letszam>20</letszam>
+    </vizsga>
+    <vizsga vid="vizsga8">
+        <datum>2008.01.04</datum>
+        <kezdes>09:00</kezdes>
+        <targy>Számítógép hálózatok</targy>
+        <vizsgaztato kod="O7"/>
+        <terem>A/2 II. ea</terem>
+        <letszam>30</letszam>
+    </vizsga>
+    <vizsga vid="vizsga9">
+        <datum>2008.01.18</datum>
+        <kezdes>09:00</kezdes>
+        <targy>Számítógép hálózatok</targy>
+        <vizsgaztato kod="O7"/>
+        <terem>A/2 II. ea</terem>
+        <letszam>35</letszam>
+    </vizsga>
+    <vizsga vid="vizsga10">
+        <datum>2008.01.03</datum>
+        <kezdes>08:00</kezdes>
+        <targy>Szoftvertechnológia</targy>
+        <vizsgaztato kod="O5"/>
+        <terem>A/2 II. ea</terem>
+        <letszam>20</letszam>
+    </vizsga>
+    <vizsga vid="vizsga11">
+        <datum>2008.01.10</datum>
+        <kezdes>08:00</kezdes>
+        <targy>Szoftvertechnológia</targy>
+        <vizsgaztato kod="O5"/>
+        <terem>A/2 II. ea</terem>
+        <letszam>20</letszam>
+    </vizsga>
+    <vizsga vid="vizsga12">
+        <datum>2008.01.17</datum>
+        <kezdes>08:00</kezdes>
+        <targy>Szoftvertechnológia</targy>
+        <vizsgaztato kod="O6"/>
+        <terem>A/2 II. ea</terem>
+        <letszam>20</letszam>
+    </vizsga>
+    <vizsga vid="vizsga13">
+        <datum>2008.01.24</datum>
+        <kezdes>08:00</kezdes>
+        <targy>Szoftvertechnológia</targy>
+        <vizsgaztato kod="O6"/>
+        <terem>A/2 II. ea</terem>
+        <letszam>20</letszam>
+    </vizsga>
+    <vizsga vid="vizsga15">
+        <datum>2008.01.04</datum>
+        <kezdes>08:00</kezdes>
+        <targy>Adatbázis rendszerek II.</targy>
+        <vizsgaztato kod="O2"/>
+        <terem>In100</terem>
+        <letszam>30</letszam>
+    </vizsga>
+    <vizsga vid="vizsga16">
+        <datum>2008.01.09</datum>
+        <kezdes>10:00</kezdes>
+        <targy>Adatbázis rendszerek II.</targy>
+        <vizsgaztato kod="O3"/>
+        <terem>In100</terem>
+        <letszam>20</letszam>
+    </vizsga>
+   </vizsgak>    
+    
+</vizsgakozpont>

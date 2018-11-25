@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="feladat.xsl"?>
+<feladatok>
+    <konyv kod="1" kiado="5">
+        <cim>Falatok</cim>
+        <kategoria>szakacs</kategoria>
+        <ar>21</ar>
+    </konyv>
+    <konyv kod="2" kiado="3">
+        <cim>Szombatok</cim>
+        <kategoria>vers</kategoria>
+        <ar>32</ar>
+    </konyv>
+    <kiado kod="1">
+        <nev>Barna</nev>
+        <varos>Eger</varos>
+    </kiado>
+    <kiado kod="3">
+        <nev>Mozaik</nev>
+        <varos>Budapest</varos>
+    </kiado>
+    <kiado kod="5">
+        <nev>ComputerBooks</nev>
+        <varos>Tata</varos>
+    </kiado>
+</feladatok>

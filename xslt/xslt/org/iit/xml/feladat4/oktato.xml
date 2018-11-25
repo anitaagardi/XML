@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="txt/xsl" hret="konyvek.xsl"?>
+<!DOCTYPE Infotanszek SYSTEM "file:/D:/xml/beadando/minta/beadando.dtd">
+<Infotanszek>
+    <tanar>
+        <nev>
+            <vezeteknev>Pance</vezeteknev>
+            <keresztnev>Miklós</keresztnev>
+        </nev>
+        <e-mail>pance@iit.uni-miskolc.hu</e-mail>
+        <targy>XML</targy>
+    </tanar>
+    <tanar>
+        <nev>
+            <vezeteknev>Smid</vezeteknev>
+            <keresztnev>Laszlo</keresztnev>
+        </nev>
+        <e-mail>smid@iit.uni-miskolc.hu</e-mail>
+        <targy>adatb</targy>
+    </tanar>
+    <tanar>
+        <nev>
+            <vezeteknev>Kovács</vezeteknev>
+            <keresztnev>Szilveszter</keresztnev>
+        </nev>
+        <e-mail>szkovacs@iit.uni-miskolc.hu</e-mail>
+        <targy>szgephalo</targy>
+    </tanar>
+    <terem szam="50">
+        <oprendszer>linux</oprendszer>
+        <ferohely>30</ferohely>
+    </terem>
+    <terem szam="56">
+        <oprendszer>windows</oprendszer>
+        <ferohely>30</ferohely>
+    </terem>
+    <hallgato>
+        <neptunkod>BBCKYB</neptunkod>
+        <kartyaszam>nincs</kartyaszam>
+        <vegzos-e>nem</vegzos-e>
+    </hallgato>    
+    <hallgato>
+        <neptunkod>B057V(</neptunkod>
+        <kartyaszam>nincs</kartyaszam>
+        <vegzos-e>nem</vegzos-e>
+    </hallgato>
+</Infotanszek>
